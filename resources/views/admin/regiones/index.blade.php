@@ -1,13 +1,13 @@
 @extends('adminlte::page')
 
-@section('title',   'Dashboard')
+@section('title', 'Regiones')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>Regiones</h1>
 @stop
 
 @section('content')
-    
+    @livewire('regiones-page')
 @stop
 
 @section('css')
@@ -16,5 +16,4 @@
 @stop
 
 @section('js')
-    <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
 @stop

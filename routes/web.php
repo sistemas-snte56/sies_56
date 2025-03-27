@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\RegionController;
+use App\Livewire\RegionesPage;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -25,4 +30,8 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+
+    // Route::get('/regiones', RegionesPage::class)->name('regiones');
+    route::get('/regiones', [RegionController::class, 'index'])->name('regiones');
 });

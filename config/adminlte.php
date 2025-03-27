@@ -334,6 +334,11 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
         [
+            'text' => 'Regiones',
+            'route' => 'regiones',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
             'text' => 'change_password',
             'url' => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
@@ -430,7 +435,7 @@ return [
 
     'plugins' => [
         'Datatables' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
@@ -475,12 +480,12 @@ return [
             ],
         ],
         'Sweetalert2' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
                     'asset' => false,
-                    'location' => '//cdn.jsdelivr.net/npm/sweetalert2@8',
+                    'location' => '//cdn.jsdelivr.net/npm/sweetalert2@11',
                 ],
             ],
         ],
@@ -499,6 +504,81 @@ return [
                 ],
             ],
         ],
+
+
+        /**
+         * https://cdn.datatables.net/buttons/2.3.4/
+         * https://datatables.net/extensions/buttons/examples/html5/simple.html
+         */
+
+        'DatatablesPlugins' => [
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'js',
+                    'asset' => false,// Cambiar a false si el archivo es remoto
+                    // 'location' => 'vendor/datatables-plugins/buttons/js/dataTables.buttons.min.js',
+                    'location' => '//cdn.datatables.net/buttons/2.3.4/js/dataTables.buttons.min.js',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => false,// Cambiar a false si el archivo es remoto
+                    // 'location' => 'vendor/datatables-plugins/buttons/js/dataTables.buttons.min.js',
+                    'location' => '//cdn.datatables.net/buttons/2.3.4/css/buttons.dataTables.min.css',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,// Cambiar a false si el archivo es remoto
+                    // 'location' => 'vendor/datatables-plugins/buttons/js/buttons.bootstrap4.min.js',
+                    'location' => '//cdn.datatables.net/buttons/2.3.4/js/buttons.bootstrap4.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,// Cambiar a false si el archivo es remoto
+                    // 'location' => 'vendor/datatables-plugins/buttons/js/buttons.html5.min.js',
+                    'location' => '//cdn.datatables.net/buttons/2.3.4/js/buttons.html5.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,// Cambiar a false si el archivo es remoto
+                    // 'location' => 'vendor/datatables-plugins/buttons/js/buttons.print.min.js',
+                    'location' => '//cdn.datatables.net/buttons/2.3.4/js/buttons.print.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,// Cambiar a false si el archivo es remoto
+                    // 'location' => 'vendor/datatables-plugins/buttons/js/buttons.print.min.js',
+                    'location' => '//cdn.datatables.net/buttons/2.3.4/js/buttons.print.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,// Cambiar a false si el archivo es remoto
+                    // 'location' => 'vendor/datatables-plugins/jszip/jszip.min.js',
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,// Cambiar a false si el archivo es remoto
+                    // 'location' => 'vendor/datatables-plugins/pdfmake/pdfmake.min.js',
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,// Cambiar a false si el archivo es remoto
+                    // 'location' => 'vendor/datatables-plugins/pdfmake/vfs_fonts.js',
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => false,// Cambiar a false si el archivo es remoto
+                    // 'location' => 'vendor/datatables-plugins/buttons/css/buttons.bootstrap4.min.css',
+                    'location' => '//cdn.datatables.net/buttons/2.3.4/css/buttons.bootstrap4.min.css',
+                ],
+            ],
+        ],
+        
+        
+        
     ],
 
     /*
@@ -546,5 +626,5 @@ return [
     |
     */
 
-    'livewire' => false,
+    'livewire' => true,
 ];

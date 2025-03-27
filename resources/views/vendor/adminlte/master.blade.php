@@ -21,6 +21,7 @@
 
     {{-- Custom stylesheets (pre AdminLTE) --}}
     @yield('adminlte_css_pre')
+    
 
     {{-- Base Stylesheets (depends on Laravel asset bundling tool) --}}
     @if(config('adminlte.enabled_laravel_mix', false))
@@ -130,6 +131,7 @@
 
     {{-- Custom Scripts --}}
     @yield('adminlte_js')
+    
 
 </body>
 
